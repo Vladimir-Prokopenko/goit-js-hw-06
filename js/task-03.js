@@ -13,22 +13,20 @@ const images = [
   },
 ];
 
-const listGallert = document.querySelector(".gallery");
+const listGallertRef = document.querySelector(".gallery");
 
-const madeItemImages = (arreyImages) => {
-  return arreyImages.map((element) => {
-    const itemElement = document.createElement("li");
-    itemElement.classList.add("item-gallery");
-
-    const imageElement = document.createElement("img");
-    imageElement.src = element.url;
-    imageElement.alt = element.alt;
-
-    itemElement.appendChild(imageElement);
-
-    return itemElement;
-  });
+const madeItemImages = ({ url, alt }) => {
+  return `
+    <li class = item__gallery>
+      <img src="${url}" alt="${alt}">
+    </li>
+    `;
 };
 
-const elements = madeItemImages(images);
-listGallert.append(...elements);
+const createListHtml = (arreyImages) => {
+  return arreyImages.map(madeItemImages).join("");
+};
+
+const elenents = createListHtml(images);
+
+listGallertRef.insertAdjacentHTML("afterbegin", elenents);

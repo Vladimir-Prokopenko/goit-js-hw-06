@@ -46,7 +46,7 @@ button {
   cursor: pointer;
 }
 
-.item-gallery {
+.item__gallery {
   width: 640px;
   margin-top: 30px;
 }
