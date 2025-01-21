@@ -14,4 +14,21 @@ const images = [
 ];
 
 const listGallert = document.querySelector(".gallery");
-console.log("listGallert:", listGallert);
+
+const madeItemImages = (arreyImages) => {
+  return arreyImages.map((element) => {
+    const itemElement = document.createElement("li");
+    itemElement.classList.add("item-gallery");
+
+    const imageElement = document.createElement("img");
+    imageElement.src = element.url;
+    imageElement.alt = element.alt;
+
+    itemElement.appendChild(imageElement);
+
+    return itemElement;
+  });
+};
+
+const elements = madeItemImages(images);
+listGallert.append(...elements);
