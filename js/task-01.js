@@ -1,9 +1,9 @@
-const numberOfCategories = document.querySelector("#categories");
-console.log("Number of categories:", numberOfCategories.children.length);
+const selectListElements = document.querySelector("#categories");
+console.log("Number of categories:", selectListElements.children.length);
 
-const child = numberOfCategories.children;
+const childrenRef = selectListElements.children;
 
-[...child].forEach((categorie) => {
+[...childrenRef].forEach((categorie) => {
   console.log("Category:", categorie.firstElementChild.textContent);
   console.log("Elements:", categorie.lastElementChild.children.length);
 });
