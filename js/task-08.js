@@ -1,6 +1,6 @@
 const loginFormRef = document.querySelector(".login-form");
-const inputEemailRef = loginFormRef.firstElementChild.lastElementChild;
-const inputPasswordRef = loginFormRef.querySelectorAll("input")[1];
+const inputEemailRef = document.querySelector("[name = email]");
+const inputPasswordRef = document.querySelector("[name = password]");
 const buttonTypeSubmitRef = loginFormRef.querySelector("button");
 
 loginFormRef.addEventListener("submit", onFormSubmit);

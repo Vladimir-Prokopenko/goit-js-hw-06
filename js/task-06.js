@@ -9,9 +9,12 @@ function onInputBlur(event) {
 
   if (anyEnteredValue === characterLength) {
     validationInput.classList.add("valid");
-    validationInput.classList.remove("invalid");
+    if (validationInput.classList.contains("invalid"))
+      validationInput.classList.remove("invalid");
   } else {
     validationInput.classList.add("invalid");
+    if (validationInput.classList.contains("valid")) {
+    }
     validationInput.classList.remove("valid");
   }
 }
