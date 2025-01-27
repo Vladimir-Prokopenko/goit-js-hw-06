@@ -30,3 +30,31 @@ const createListHtml = (arreyImages) => {
 const elenents = createListHtml(images);
 
 listGallertRef.insertAdjacentHTML("afterbegin", elenents);
+
+// // Находим список ul.gallery
+// const gallery = document.querySelector(".gallery");
+
+// // Генерируем разметку для каждого изображения
+// const markup = images
+//   .map(
+//     ({ url, alt }) =>
+//       `<li class="gallery-item"><img src="${url}" alt="${alt}" class="gallery-image"></li>`
+//   )
+//   .join("");
+
+// // Вставляем разметку за одну операцию
+// gallery.insertAdjacentHTML("beforeend", markup);
+
+// // Добавляем стили для галереи через JavaScript (можно использовать CSS отдельно)
+// gallery.style.display = "flex";
+// gallery.style.gap = "15px";
+// gallery.style.listStyle = "none";
+// gallery.style.padding = "0";
+// gallery.style.margin = "0";
+
+// const imagesElements = gallery.querySelectorAll(".gallery-image");
+// imagesElements.forEach((img) => {
+//   img.style.width = "300px";
+//   img.style.height = "auto";
+//   img.style.borderRadius = "8px";
+// });

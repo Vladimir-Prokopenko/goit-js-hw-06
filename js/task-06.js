@@ -18,3 +18,25 @@ function onInputBlur(event) {
     validationInput.classList.remove("valid");
   }
 }
+
+// // Находим инпут в DOM
+// const inputEl = document.querySelector("#validation-input");
+
+// // Функция проверки длины текста
+// const validateInput = (event) => {
+//   const inputLength = event.target.value.trim().length; // Текущая длина текста
+//   const requiredLength = Number(inputEl.dataset.length); // Требуемая длина из data-length
+
+//   // Удаляем классы valid и invalid перед проверкой
+//   inputEl.classList.remove("valid", "invalid");
+
+//   // Добавляем класс valid или invalid в зависимости от длины
+//   if (inputLength === requiredLength) {
+//     inputEl.classList.add("valid");
+//   } else {
+//     inputEl.classList.add("invalid");
+//   }
+// };
+
+// // Добавляем слушатель события blur на инпут
+// inputEl.addEventListener("blur", validateInput);

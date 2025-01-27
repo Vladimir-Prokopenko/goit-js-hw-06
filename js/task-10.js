@@ -43,3 +43,49 @@ refs.dataDestroyButton.addEventListener("click", onClickDestroyButton);
 function onClickDestroyButton(event) {
   refs.divBoxesAll.innerHTML = "";
 }
+
+// // Функция для генерации случайного цвета
+// function getRandomHexColor() {
+//   return `#${Math.floor(Math.random() * 16777215)
+//     .toString(16)
+//     .padStart(6, 0)}`;
+// }
+
+// // Находим элементы в DOM
+// const controls = document.querySelector("#controls");
+// const input = controls.querySelector("input");
+// const createBtn = controls.querySelector("[data-create]");
+// const destroyBtn = controls.querySelector("[data-destroy]");
+// const boxesContainer = document.querySelector("#boxes");
+
+// // Функция создания коллекции элементов
+// function createBoxes(amount) {
+//   const boxes = [];
+//   let size = 30; // Начальный размер
+//   for (let i = 0; i < amount; i++) {
+//     const box = document.createElement("div");
+//     box.style.width = `${size}px`;
+//     box.style.height = `${size}px`;
+//     box.style.backgroundColor = getRandomHexColor();
+//     box.style.margin = "5px"; // Добавим отступы для визуального эффекта
+//     boxes.push(box);
+//     size += 10; // Увеличиваем размер на 10px
+//   }
+//   boxesContainer.append(...boxes); // Добавляем все элементы за одну операцию
+// }
+
+// // Функция очистки коллекции
+// function destroyBoxes() {
+//   boxesContainer.innerHTML = ""; // Удаляем содержимое контейнера
+// }
+
+// // Обработчик кнопки создания
+// createBtn.addEventListener("click", () => {
+//   const amount = Number(input.value); // Получаем значение из инпута
+//   if (amount > 0) {
+//     createBoxes(amount); // Создаем элементы
+//   }
+// });
+
+// // Обработчик кнопки очистки
+// destroyBtn.addEventListener("click", destroyBoxes);

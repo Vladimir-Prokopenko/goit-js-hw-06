@@ -11,3 +11,16 @@ function onInputName(event) {
     outputNameRef.textContent = "Anonymous";
   }
 }
+
+// // Находим элементы в DOM
+// const inputEl = document.querySelector("#name-input");
+// const outputEl = document.querySelector("#name-output");
+
+// // Функция обновления значения в span
+// const updateOutput = (event) => {
+//   const inputValue = event.target.value.trim(); // Получаем текущее значение инпута
+//   outputEl.textContent = inputValue || "Anonymous"; // Если значение пустое, показываем "Anonymous"
+// };
+
+// // Добавляем слушатель события input на инпут
+// inputEl.addEventListener("input", updateOutput);

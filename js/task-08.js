@@ -15,6 +15,7 @@ function onFormSubmit(event) {
 
   if (!mail || !password) {
     alert("Все поля должны быть заполнены!");
+    return;
   } else {
     const formData = {
       mail,
@@ -25,3 +26,37 @@ function onFormSubmit(event) {
     loginFormRef.reset();
   }
 }
+
+// // Находим форму в DOM
+// const loginForm = document.querySelector(".login-form");
+
+// // Функция обработки отправки формы
+// const handleFormSubmit = (event) => {
+//   event.preventDefault(); // Отменяем перезагрузку страницы
+
+//   // Доступ к элементам формы
+//   const {
+//     elements: { email, password },
+//   } = event.currentTarget;
+
+//   // Проверяем, заполнены ли все поля
+//   if (!email.value.trim() || !password.value.trim()) {
+//     alert("Все поля должны быть заполнены!");
+//     return;
+//   }
+
+//   // Собираем данные формы в объект
+//   const formData = {
+//     email: email.value.trim(),
+//     password: password.value.trim(),
+//   };
+
+//   // Выводим объект в консоль
+//   console.log(formData);
+
+//   // Очищаем форму
+//   event.currentTarget.reset();
+// };
+
+// // Добавляем слушатель события submit на форму
+// loginForm.addEventListener("submit", handleFormSubmit);
